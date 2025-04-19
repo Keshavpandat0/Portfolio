@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">MY PORTFOLIO</div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>HELLO JII</h1>
+            <p>A passionate developer creating web applications and solutions</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text"><br />
+                <u>
+                    <p>My Name Is Keshav Sharma <br /> I Study BCA[Baclor Of Computer Application]<br /> In St. Andrews Institute Of Technology</p><br />
+                    <p>I'm a web developer with experience in building responsive and user-friendly websites. I specialize
+                        in HTML, CSS, and JavaScript, and I'm always learning new technologies to improve my skills.</p><br />
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source, or
+                        enjoying outdoor activities.</p>
+                </u>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Git</span>
+            <span class="skill">UI/UX</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img1"></div>
+                <div class="project-info">
+                    <h3>Project 1</h3>
+                    <p>This is a TO-DO list application built using HTML, CSS, and JavaScript.</p>
+                    <a href="https://todo-list-weld-zeta.vercel.app/" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img2"></div>
+                <div class="project-info">
+                    <h3>Project 2</h3>
+                    <p>This a Calculator application built using HTML, CSS, and JavaScript.</p>
+                    <a href=" https://calculator-woad-rho.vercel.app/" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img3"></div>
+                <div class="project-info">
+                    <h3>Project 3</h3>
+                    <p>This is a NetFlix Clone application built using HTML, CSS, and JavaScript.</p>
+                    <a href="https://netflix-clone-amber-pi-13.vercel.app/" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
